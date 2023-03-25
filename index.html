@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Travel Website</title>
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6;">
+    <header style="background-color: #333; color: #fff; text-align: center; padding: 1rem;">
+        <h1>Basic Travel Website</h1>
+        <nav style="display: flex; justify-content: center; background-color: #444;">
+            <a href="#" onclick="showTab('welcome')" style="color: #fff; text-decoration: none; padding: 0.5rem 1rem; display: inline-block;">Welcome</a>
+            <a href="#" onclick="showTab('destinations')" style="color: #fff; text-decoration: none; padding: 0.5rem 1rem; display: inline-block;">Destinations</a>
+            <a href="#" onclick="showTab('tips')" style="color: #fff; text-decoration: none; padding: 0.5rem 1rem; display: inline-block;">Tips</a>
+            <a href="#" onclick="showTab('contact')" style="color: #fff; text-decoration: none; padding: 0.5rem 1rem; display: inline-block;">Contact</a>
+        </nav>
+    </header>
+    <main style="padding: 2rem;">
+        <div id="welcome" style="display: block;">
+            <h2>Welcome to our travel website!</h2>
+            <p>Discover your next adventure with us.</p>
+        </div>
+        <div id="destinations" style="display: none;">
+            <h2>Destinations</h2>
+            <ul style="list-style-type: none; margin-bottom: 2rem;">
+                <li>Destination 1</li>
+                <li>Destination 2</li>
+                <li>Destination 3</li>
+            </ul>
+        </div>
+        <div id="tips" style="display: none;">
+            <h2>Travel Tips</h2>
+            <p>Tip 1: Pack light and carry essential items.</p>
+            <p>Tip 2: Research your destination before your trip.</p>
+            <p>Tip 3: Learn some basic phrases in the local language.</p>
+        </div>
+        <div id="contact" style="display: none;">
+            <h2>Contact Us</h2>
+            <p>Email: info@basictravelwebsite.com</p>
+            <p>Phone: +1 (555) 123-4567</p>
+        </div>
+    </main>
+    <footer style="background-color: #333; color: #fff; text-align: center; padding: 1rem;">
+        <p>&copy; 2023 Basic Travel Website. All rights reserved.</p>
+    </footer>
+    <script>
+        function showTab(tabId) {
+            var tabContent = document.querySelectorAll('main > div');
+            for (var i = 0; i < tabContent.length; i++) {
+                tabContent[i].style.display = 'none';
+            }
+            document.getElementById(tabId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
